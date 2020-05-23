@@ -1,0 +1,23 @@
+<div [ngClass]="clase" class="alert" role="alert">
+    <strong>Hola Mundo</strong> Estoy cambiando clases, con el NgClass
+</div>
+
+<button class="btn btn-info mr-1" (click)="clase = 'alert-info'">Info</button>
+<button class="btn btn-success mr-1" (click)="clase = 'alert-success'">Success</button>
+<button class="btn btn-warning mr-1" (click)="clase = 'alert-warning'">Warning</button>
+
+<hr>
+
+<h3 [ngClass]="{ 'text-danger': propiedades.danger, 'text-info': !propiedades.dangers }">Hola Mundo</h3>
+<button class="btn" (click)="propiedades.danger = !propiedades.danger" [ngClass]="{ 'btn-danger': propiedades.danger, 'btn-info': !propiedades.danger }">
+    Cambiar
+</button>
+
+<hr>
+
+<h3>Proceso Asíncrono</h3>
+<button (click)="ejecutar()" class="btn btn-primary" [disabled]="loading">
+    <i [ngClass]="{ 'fa-save': !loading, 'fa-refresh fa-spin': loading }" class="fa"></i>
+    <span *ngIf="!loading"> Guardar Cambios </span>
+    <span *ngIf="loading"> Espere por favor! </span>
+</button>
