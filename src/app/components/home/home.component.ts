@@ -9,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
 
     <app-clases></app-clases>
 
+    <hr>
     <p [appResaltado]="'blue'">
         Hola Mundo
     </p>
-
+    <hr>
     <app-ng-switch></app-ng-switch>
   `,
   styles: []
