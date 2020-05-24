@@ -8,7 +8,9 @@ export class ClasesComponent implements OnInit {
 
   clase = 'alert-danger';
   loading = false;
-  propiedades: object = {
+  /* Lo coloque any | object porque me daba error en el HTML
+  si lo dejaba unicamente de tipo Object */
+  propiedades: any | object = {
     danger: false
   };
 

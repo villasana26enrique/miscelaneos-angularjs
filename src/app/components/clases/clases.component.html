@@ -8,7 +8,7 @@
 
 <hr>
 
-<h3 [ngClass]="{ 'text-danger': propiedades.danger, 'text-info': !propiedades.dangers }">Hola Mundo</h3>
+<h3 [ngClass]="{ 'text-danger': propiedades.danger, 'text-info': !propiedades.danger }">Hola Mundo</h3>
 <button class="btn" (click)="propiedades.danger = !propiedades.danger" [ngClass]="{ 'btn-danger': propiedades.danger, 'btn-info': !propiedades.danger }">
     Cambiar
 </button>
